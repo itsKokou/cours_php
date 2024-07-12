@@ -1,0 +1,78 @@
+<?php use App\Config\Helper; ?>
+<div class="nouveau" style="">
+    <a href="<?=BASE_URL?>/vente/form" class="btnSave">Nouveau</a>
+</div>
+<div class="conteneur">
+    <div class="form">
+        <form action="<?=BASE_URL?>/vente" method="post">
+            <div class="form-control">
+                <label for="">Date :</label>
+                <select name="date" id="">
+                    <option value="0">All</option>
+                    <?php foreach ($dates as $val) :?>
+                        <option value=<?= $val ?>><?= Helper::dateToFr($val)?></option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="">Etat :</label>
+                <select name="etat" id="">
+                    <option value="0">All</option>
+                    <option value="Payé">Payé</option>
+                    <option value="Semi-payé">Semi-payé</option>
+                    <option value="Impayé">Impayé</option>
+                    
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="">Client :</label>
+                <select name="client" id="">
+                    <option value="0">All</option>
+                    <?php foreach ($clients as $val) :?>
+                        <option value=<?= $val->getId() ?>><?= $val->getNom()." ".$val->getPrenom() ?></option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+            <div class="form-control btn">
+                <button type="submit" name="btnSave" value="recherche-vente">Recherche</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="classe">
+        <div class="h2">
+            <h2>Liste des Ventes</h2>
+        </div>
+        <table>
+            <tr>
+                <th>N°</th>
+                <th>QUANTITE</th>
+                <th>DATE</th>
+                <th>MONTANT</th>
+                <th>ETAT</th>
+                <th>OBSERVATION</th>
+                <th>CLIENT</th>
+                <th>VENDEUR</th>
+                <th>DETAILS</th>
+            </tr>
+            <?php foreach ($ventes as $v): 
+                $vendeur = $userCtrl->findUserById($v->getVendeurID(),1);
+                $cl = $userCtrl->findUserById($v->getClientID(),3);
+                ?>
+                <tr>
+                    <td><?= $v->getId() ?></td>
+                    <td><?= $v->getQte() ?></td>
+                    <td><?= Helper::dateToFr($v->getDate()) ?></td>
+                    <td><?= $v->getMontant() ?></td>
+                    <td><?= $v->getEtat() ?></td>
+                    <td><?= $v->getObservation() ?></td>
+                    <td><?= $cl->getNom()." ".$cl->getPrenom() ?></td>
+                    <td><?= $vendeur->getNom()." ".$vendeur->getPrenom() ?></td>
+                    <td><a href="<?=BASE_URL?>/vente/detail?id=<?=$v->getId()?>">Voir</a></td>
+
+                </tr>
+            <?php endforeach ?>
+        </table>
+        <?php require_once("./../views/inc/paginate.html.php") ?>
+    </div>
+</div>

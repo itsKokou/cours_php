@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 40%;
+            font-size: 18px;
+        }
+        fieldset{
+            background-color: rgba(211, 209, 209, 0.689);
+        }
+        .ok{
+            margin-bottom: 20px;
+        }
+        #prenom{
+            margin-right: 10px;
+        }
+        #bouton{
+            text-align: center;
+        }
+        button{
+            margin-top: 30px;
+            border: 1px solid black;
+            font-size: 17px;
+            border-radius: 4px;
+            padding: 4px 8px;
+            
+        }
+        button:hover{
+            color: white;
+            background-color: blueviolet;
+        }
+        #b1{
+            margin-right: 220px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>INSCRIPTION</legend>
+            <div class="ok">
+                <label for="nom" style="margin-right: 50px;">Nom :</label>
+                <input id="nom" type="text" name="nom" required>
+            </div>
+            <div class="ok">
+                <label for="prenom" style="margin-right: 10px;">Prénom(s) :</label>
+                <input id="prenom" type="text" name="prenom" required>
+            </div>
+            <div class="ok">
+                <label for="sexe" style="margin-right: 44px;">Sexe :</label>
+                <input id="fem" type="radio" name="sexe" required>
+                <label for="fem">F</label>
+                <input type="radio" name="sexe" id="hom" required>
+                <label for="hom">M</label>
+            </div>
+            <div class="ok">
+                <label for="address" style="margin-right: 28px;">Adresse :</label><br>
+                <textarea style="margin-left: 100px; margin-top: -15px;" name="adresse" id="address" cols="30" rows="3" placeholder="Veuillez entrer votre adresse..." required></textarea>
+            </div>
+            <div class="ok">
+                <label for="classe" style="margin-right: 40px;">Classe :</label>
+                <select name="classe" id="classe" required>
+                    <option value="">L1 A</option>
+                    <option value="">L1 B</option>
+                    <option value="">L1 C</option>
+                    <option value="">L1 D</option>
+                    <option value="">L1 E</option>
+                    <option value="">L2 GLRSA</option>
+                    <option value="">L2 GLRSB</option>
+                    <option value="">L2 IAGE</option>
+                    <option value="">L2 ETSE</option>
+                    <option value="">L2 TTL</option>
+                    <option value="">L3 GLRS</option>
+                    <option value="">L3 ETSE</option>
+                    <option value="">L3 TTL</option>
+                    <option value="">L3 IAGE</option>
+                </select>
+            </div>
+            <div class="ok" id="bouton">
+                <button id="b1" type="reset">Annuler</button>
+                <button id="b2" type="submit">Inscrire</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

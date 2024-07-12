@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 30%;
+            font-size: 18px;
+        }
+        fieldset{
+            background-color: rgba(148, 207, 207, 0.689);
+            border-radius: 4px;
+        }
+        .ok{
+            margin-bottom: 20px;
+        }
+        #bouton{
+            text-align: center;
+        }
+        button{
+            margin-top: 30px;
+            border: 1px solid black;
+            font-size: 17px;
+            border-radius: 4px;
+            padding: 4px 8px;
+            
+        }
+        button:hover{
+            color: white;
+            background-color: rgb(230, 3, 3);
+        }
+        #b1{
+            margin-right: 150px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>CREER CLASSE</legend>
+            <div class="ok">
+                <label for="filiere">Filière :</label>
+                <select name="filiere" id="filiere">
+                    <option value="">GLRS</option>
+                    <option value="">ETSE</option>
+                    <option value="">IAGE</option>
+                    <option value="">TTL</option>
+                    <option value="">CPD</option>
+                </select>
+            </div>
+            <div class="ok">
+                <label for="niveau">Niveau :</label>
+                <select name="niveau" id="niveau">
+                    <option value="">Licence 1</option>
+                    <option value="">Licence 2</option>
+                    <option value="">Licence 3</option>
+                    <option value="">Master 1</option>
+                    <option value="">Master 2</option>
+                </select>
+            </div>
+            <div class="ok" id="bouton">
+                <button id="b1" type="reset">Annuler</button>
+                <button id="b2" type="submit">Créer</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

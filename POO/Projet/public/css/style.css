@@ -1,0 +1,561 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  background-color: #f2f6f8;
+  margin-bottom: 60px;
+}
+
+.logo {
+  width: 6%;
+  user-select: none; /** Plus pour les textes  */
+}
+
+.navigation a {
+  position: relative;
+  font: 1.1em;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #ff5a08;
+  border-radius: 5px;
+  transform: scaleX(0); /**? Fait disparaître ce qui précède */
+  transition: transform 0.5s;
+  transform-origin: right; /**? Sens d'apparition droite vers gauche*/
+}
+
+.navigation a:hover::after {
+  transform-origin: left; /**? Sens d'apparition gauche vers droite*/
+  transform: scaleX(1);
+}
+
+.fm{
+  display: inline-block;
+}
+
+.navigation .btnLogout-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #ff0000;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #ff0000;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.navigation .btnLogout-popup:hover {
+  background: #ff0000;
+  border: none;
+  color: #ffffff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+.classe table,
+td,
+tr,
+th {
+  border: 2px solid brown;
+  text-align: center;
+}
+
+.classe table td {
+  height: 40px;
+}
+
+.classe table {
+  border-collapse: collapse;
+  width: 84%;
+  margin: 2% 10%;
+}
+.classe {
+  width: 88%;
+  background-color: rgba(224, 217, 217, 0.92);
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.747) 15px 15px 15px;
+  padding: 20px 0px;
+}
+.conteneur {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.classe .h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.classe h2 {
+  text-align: center;
+  color: brown;
+  width: 30%;
+  border: 2px solid rgb(0, 0, 0);
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px 0px;
+  background-color: white;
+}
+
+.form {
+  height: 80px;
+  width: 80%;
+  border: 1px brown solid;
+  padding: 4px 10px 25px 10px; /* sens aiguille d'une montre */
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: rgba(224, 217, 217, 0.674);
+}
+.form2 {
+  width: 50%;
+}
+
+.form form {
+  display: flex;
+}
+.form .form-control {
+  width: 30%;
+  margin: 20px;
+}
+
+.form .btn {
+  width: 10%;
+}
+.form .form-control select {
+  width: 50%;
+  height: 30px;
+}
+.form .x2 {
+  width: 60%;
+}
+
+.form .x2 select {
+  width: 40%;
+  height: 30px;
+}
+
+.form .form-control label {
+  width: 20%;
+  margin-right: 10px;
+}
+.form .form-control button {
+  padding: 5px;
+}
+
+.form .form-control button {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(204, 174, 174);
+}
+
+.form .form-control button:hover {
+  color: white;
+  background-color: brown;
+  cursor: pointer;
+}
+
+.conteneur .form .form-control .btnconnexion {
+  background-color: white;
+  padding: 6px 8px 8px 8px;
+  color: brown;
+  font-size: 17px;
+  border-radius: 10px;
+}
+.conteneur .form .form-control .btnconnexion:hover {
+  background-color: rgb(21, 255, 49);
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.form-ajoutCategorie {
+  width: 60%;
+  border: 1px solid #dedfdf;
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  background-color: rgba(224, 217, 217, 0.637);
+}
+
+.form-ajoutCategorie form {
+  display: flex;
+}
+
+.form-ajoutCategorie form input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dedfdf;
+  border-radius: 4px;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.form-line {
+  width: 70%;
+  margin-right: 40px;
+  flex-direction: column;
+}
+
+.btnSave {
+  text-decoration: none;
+  background-color: rgb(0, 97, 252);
+  color: white;
+  padding: 6px 10px;
+  font-size: 17px;
+  border: 1px solid rgb(0, 97, 252);
+  border-radius: 6px;
+}
+
+.btnSave:hover {
+  background-color: rgba(224, 217, 217, 0.637);
+  color: rgb(0, 97, 252);
+  cursor: pointer;
+}
+
+@keyframes hideText {
+  0% { opacity: 1;}
+  90% { opacity: 1; }
+  100% { opacity: 0; display: none;}
+}
+
+.succes{
+  color: rgb(5, 241, 5);
+  font-size: 15px;
+  font-weight: 600;
+  padding:4px 10%;
+  border-radius: 4px;
+  animation: hideText 4s;
+  animation-fill-mode: forwards;
+}
+
+.text-danger {
+  color: red;
+  font-size: 14px;
+}
+
+
+.nouveau {
+  margin-bottom: 40px;
+  padding-left: 87%;
+}
+
+/* ---------------------------------------- -------------*/
+
+.form-ajout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid white;
+  padding: 20px 10px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.form-ajout .forme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-ajout .line {
+  margin: 10px 0px;
+  width: 80%;
+}
+
+.form-ajout .line input,
+.form-ajout .line select {
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  border: 2px solid rgb(197, 196, 196);
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-top: 4px;
+}
+
+.form-ajout .line-btn {
+  text-align: center;
+}
+
+table td a {
+  font: 17px;
+  color: rgb(87, 90, 255);
+  border: 1px solid rgb(87, 90, 255);
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 2px 10px;
+  transition: 0.4s ease;
+}
+
+table td a:hover {
+  background-color: rgb(87, 90, 255);
+  color: white;
+  transition: 0.4s ease;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 60%;
+  border: 1px brown solid;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: rgba(224, 217, 217, 0.637);
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.total {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  align-items: end;
+  margin: 0% 10%;
+  color: #ff0000;
+  font-weight: 700;
+}
+
+/*----------------------------------------------------------------*/
+.contain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-utiliser {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  width: 60%;
+}
+
+.form-utiliser form {
+  display: flex;
+  width: 100%;
+  margin: 10px 0px 40px 0px;
+  padding: 15px;
+  border: 2px solid rgb(237, 234, 234);
+  border-radius: 8px;
+}
+
+.form-utiliser .ligne {
+  flex: 1;
+}
+
+.form-utiliser .ligne input,
+.form-utiliser .ligne label,
+.form-utiliser .ligne small {
+  display: block;
+}
+.form-utiliser .ligne input,
+.form-utiliser .ligne select {
+  width: 80%;
+  height: 35px;
+  border: 2px solid rgb(237, 234, 234);
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 0px 10px;
+}
+
+.form-utiliser .ligne .btnLigne {
+  text-decoration: none;
+  background-color: rgb(245, 243, 243);
+  color: rgb(0, 0, 0);
+  padding: 6px 10px;
+  font-size: 17px;
+  border: 1px solid rgb(245, 243, 243);
+  border-radius: 6px;
+  transition: 0.3s ease;
+  transform: translateY(22px);
+}
+
+.form-utiliser .ligne .btnLigne:hover {
+  background-color: rgba(43, 255, 0, 0.959);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.liste {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.liste h2 {
+  text-decoration: underline;
+}
+
+.liste table,
+.liste table td,
+.liste table tr,
+.liste table th {
+  border: 2px solid rgb(234, 231, 231);
+  text-align: center;
+}
+
+.liste table {
+  border-collapse: collapse;
+  width: 84%;
+  margin: 2% 10%;
+}
+
+.liste table th {
+  height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #ebebeb;
+}
+
+.liste table td {
+  height: 40px;
+  font-size: 17px;
+}
+
+.form-utiliser .btnligne {
+  padding-left: 28%;
+  margin-top: 20px;
+}
+
+.btnAnnuler {
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+  margin-right: 20%;
+}
+
+.btnAnnuler:hover {
+  color: #ff0000;
+}
+
+.observation form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+}
+
+.observation form .ob {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 8px 0px;
+}
+
+.observation form #ok {
+  width: 80%;
+}
+
+.observation form .ligne input {
+  width: 100%;
+  height: 40px;
+}
+
+.observation form .btn {
+  display: flex;
+  width: 80%;
+  padding-left: 20%;
+  margin-top: 25px;
+}
+
+/*--------------------------------Pagination-------------*/
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  background-color: #f5f5f5;
+  color: #007bff;
+  text-decoration: none;
+  transition: .4s ease;
+  margin-left: -2px;
+}
+
+.pagination a:hover{
+  background-color: #a3a3a3;
+  border-color: #a3a3a3;
+  color: white;
+  transition: .4s ease;
+}
+
+.pagination .active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination .a1{
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.pagination .a2{
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+

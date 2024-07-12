@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         form{
+            width: 40%;
+            font-size: 18px;
+        }
+        fieldset{
+            background-color: rgba(148, 207, 207, 0.689);
+            border-radius: 4px;
+        }
+        .ok{
+            margin-bottom: 20px;
+        }
+        #bouton{
+            text-align: center;
+        }
+        button{
+            margin-top: 30px;
+            border: 1px solid black;
+            font-size: 17px;
+            border-radius: 4px;
+            padding: 4px 8px;
+            
+        }
+        button:hover{
+            color: white;
+            background-color: rgb(230, 3, 3);
+        }
+        #b1{
+            margin-right: 245px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>DEMANDE</legend>
+            <div class="ok">
+                <label for="obj" style="margin-right: 25px;">Objet : </label>
+                <select style="font-size: 17px;" name="objet" id="obj" required>
+                    <option value="">Demande de suspension</option>
+                    <option value="">Demande de suppression</option>
+                </select>
+            </div>
+            <div class="ok">
+                <label for="motif">Motif :</label><br>
+                <textarea style="margin-left: 80px;margin-top:-14px;" name="motif" id="motif" cols="40" rows="5" placeholder="Saisissez le motif de votre demande..." required></textarea>
+            </div>
+            <div class="ok" id="bouton">
+                <button id="b1" type="reset">Annuler</button>
+                <button id="b2" type="submit">Inscrire</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
